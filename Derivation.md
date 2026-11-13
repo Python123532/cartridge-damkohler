@@ -77,7 +77,7 @@ Set $`\mathrm{Da}=1`$ against the fastest biological process (root capture, $`t_
 | Deckwer | 1.42 m | 2.32 m |
 | Baird–Rice | 2.88 m | 4.72 m |
 
-**Honest caveat.** This uses the *jar's* $`D_L`$ as a stand-in for a raft channel. A real channel
+This uses the *jar's* $`D_L`$ as a stand-in for a raft channel. A real channel
 has its own cross-section and aeration, and any net recirculation velocity $`U`$ adds an
 advective route with $`L^*_{\text{adv}} = U\,t_{\text{fast}}`$ that is far longer. So $`L^*`$ is a
 **lower bound** on the scale where geometry can start to matter. The defensible statement is
