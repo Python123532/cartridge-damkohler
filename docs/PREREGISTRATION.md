@@ -1,8 +1,5 @@
 # Pre-registration: mixing time, Designs A and B
 
-**Date written:** ______________
-**Commit hash:** add it in a later commit. This file must be committed **before the first dye injection**.
-
 Predictions come from the 2-D solver (`results/t_uniform.csv`, made by `scripts/run_designs.py`).
 They must not be edited after the first dye run. Corrections go in a dated addendum below.
 
