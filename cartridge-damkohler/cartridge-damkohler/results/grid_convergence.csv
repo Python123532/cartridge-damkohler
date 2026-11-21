@@ -1,0 +1,4 @@
+design,t28,t56,t112,p_obs,t_extrap,GCI_fine_pct,asymptotic
+A_planar,24.719,24.520,24.552,1.000,24.583,0.385,False
+A_axisym,20.691,20.328,20.485,1.000,20.642,2.299,False
+B_planar,22.534,22.837,22.919,1.877,22.950,0.168,True
