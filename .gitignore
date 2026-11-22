@@ -1,0 +1,9 @@
+# Raw video data
+data/raw_video/
+*.mp4
+*.mov
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+.pytest_cache/
