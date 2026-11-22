@@ -13,13 +13,12 @@ about a minute.
 | quantity | value | source |
 |---|---|---|
 | superficial gas velocity $`U_G`$ | 0.96 mm/s | pump + jar size |
-| circulation velocity $`V_c`$ | 0.116 m/s | Joshi & Sharma 1979 |
-| axial dispersion $`D_L`$ | $`5.6\times10^{-4}`$ – $`2.3\times10^{-3}`$ m²/s | Deckwer 1974 / Baird & Rice 1975 |
-| mixing time, correlations | 0.8–9.8 s | $`t_{\text{mix}} = \kappa H^2/D_L`$ |
+| circulation velocity $`V_c`$ | 0.116 m/s | Joshi & Sharma 1979 (simplified form, unverified) |
+| axial dispersion $`D_L`$ | $`2.2\times10^{-3}`$ – $`2.3\times10^{-3}`$ m²/s | Deckwer 1974 / Baird & Rice 1975 (agree within 4%) |
+| mixing time, correlations (order of magnitude) | 0.8–2.4 s | $`t_{\text{mix}} = \kappa H^2/D_L`$ |
 | mixing time, 2-D solver | **6.7–302 s** | below |
 | Damköhler number vs root capture (1–48 h) | **≤ 0.084** | worst-case separation 12× |
-| crossover length $`L^*`$ (method, jar $`D_L`$) | 1.4–4.9 m | $`\sqrt{D_L t_{\text{bio}}/\kappa}`$ |
-
+| crossover length $`L^*`$ (method, jar $`D_L`$) | 2.8–4.9 m | $`\sqrt{D_L t_{\text{bio}}/\kappa}`$ |
 ## 2. Verified solver
 
 Time to ±5% uniformity, central case, three grids:
@@ -52,5 +51,5 @@ none (Peyton & Characklis 1993, $`r^2 = 0.0004`$). Measuring it needs live bacte
 rig and approvals, which makes it a biological question. See `docs/OPEN_QUESTION.md`.
 
 **Limitations:** the flow is prescribed, not solved; 2-D, not 3-D; the correlations are
-extrapolated below their validated diameter; jar values are from CAD, not measured; there are no
+outside their data range (jar diameter, gas rate and $`L/d`$ all below); jar values are from CAD, not measured; there are no
 roots.
