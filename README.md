@@ -58,5 +58,5 @@ scales come from the literature, for other strains.
 
 ## Limitations
 
-The flow is prescribed, not solved; 2-D only; the correlations are extrapolated below their
-validated diameter; no roots, chemotaxis or 3-D effects.
+The flow is prescribed, not solved; 2-D only; the bubble-column correlations are used outside their
+data range (small jar, very low gas rate); no roots, chemotaxis or 3-D effects.
