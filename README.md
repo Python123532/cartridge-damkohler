@@ -23,7 +23,7 @@ much flow shear changes bead release ($`\beta`$), which needs live bacteria and 
 
 ```bash
 pip install -r requirements.txt
-pytest -q                            # 6 tests: decay, mass, flow direction
+python -m pytest -q                            # 6 tests: decay, mass, flow direction
 python -m p2.timescales              # analytical ladder + Damköhler bracket
 python scripts/run_designs.py        # A and B at 28/56/112 + sweep (~8 min)
 python scripts/ladder_figure.py      # figure 1
