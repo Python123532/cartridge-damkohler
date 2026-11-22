@@ -42,8 +42,7 @@ and only the direction tests caught them.
 | A | 20.5–24.6 s | *pending* |
 | B | 22.9 s | *pending* |
 
-Predictions were pre-registered on ______ (`docs/PREREGISTRATION.md`). The falsifier is anything
-above 600 s.
+The falsifier is anything above 600 s.
 
 ## 4. Where it stops
 
