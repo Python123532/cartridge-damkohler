@@ -8,20 +8,22 @@ RESULTS = Path(__file__).resolve().parents[1] / "results"
 
 
 def V_c_joshi_sharma(jar=JAR):
-    # Joshi & Sharma 1979, SI
+    # Joshi & Sharma 1979, SI. simplified form, not checked against the paper (no full text)
     return 1.31 * (G * jar.D * jar.U_G) ** (1 / 3)
 
 
 def D_L_deckwer(jar=JAR):
-    # Deckwer 1974, cgs units
+    # Deckwer et al. 1974 Eq. 1: D = 2.7 d^1.4 uG^0.3, all cgs (cm, cm/s, cm^2/s).
+    # their data: 15 and 20 cm columns (plus other authors'), mean error 30%
     D_cm = jar.D * 100
     UG_cms = jar.U_G * 100
-    D_L_cgs = 0.678 * D_cm ** 1.4 * UG_cms ** 0.3
+    D_L_cgs = 2.7 * D_cm ** 1.4 * UG_cms ** 0.3
     return D_L_cgs * 1e-4
 
 
 def D_L_baird_rice(jar=JAR):
-    # Baird & Rice 1975, SI. second correlation as a check on Deckwer
+    # Baird & Rice 1975 Eq. 11, K = 0.35 dimensionless. "order-of-magnitude" only;
+    # data d = 8.2-107 cm, uG = 0.3-45 cm/s; caution for small d and L/d < 5
     return 0.35 * jar.D ** (4 / 3) * (G * jar.U_G) ** (1 / 3)
 
 
