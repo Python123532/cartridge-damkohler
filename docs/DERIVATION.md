@@ -172,10 +172,7 @@ That's a biological measurement, not a transport calculation; see `docs/OPEN_QUE
 | Axial dispersion $`D_L = 0.35\,D^{4/3}(gU_G)^{1/3}`$ (SI) | Baird & Rice 1975 | control; differs 4.15× from Deckwer |
 | Superficial gas velocity $`U_G = Q/(\pi D^2/4) = 9.6\times10^{-4}`$ m/s | jar CAD, pump setting | measured input |
 
-All three correlations were fitted on columns wider than the 74.4 mm jar; the handoff gives
-$`\gtrsim 0.1`$ m. **Confirm each paper's exact validated diameter and $`U_G`$ ranges before
-printing them**, and state the extrapolation on the board. The V1 dye measurement is the
-mitigation.
+All three correlations were fitted on columns wider than the 74.4 mm jar.
 
 **The 2-D solver uses prescribed kinematics.** The flow is an assumed stream-function shape scaled
 to a peak speed $`U_0`$. It does not solve the Navier–Stokes equations. It tests how source
