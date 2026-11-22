@@ -141,7 +141,7 @@ dispersive estimate. A shorter transport time pushes the $`\mathrm{Da} = 1`$ cro
 $`L`$, so the dispersion-only $`L^*`$ can only underestimate it.
 
 **What it does NOT give.** Plugging in the *jar's* $`D_L`$ (§6) and $`t_{\text{bio}} = 1`$ h gives
-$`L^* = 1.4`$–$`4.9`$ m across the two correlations and three values of $`\kappa`$ (`python -m p2.timescales`). That is an illustration of the method, not a prediction for any real
+$`L^* = 2.8`$–$`4.9`$ m across the two correlations and three values of $`\kappa`$ (`python -m p2.timescales`). That is an illustration of the method, not a prediction for any real
 system: a raft channel has its own cross-section, aeration and $`D_L`$. To make a channel claim,
 compute $`D_L`$ for that channel first.
 
@@ -167,10 +167,19 @@ That's a biological measurement, not a transport calculation; see `docs/OPEN_QUE
 
 | input | source | note |
 |---|---|---|
-| Circulation velocity $`V_c = 1.31(gDU_G)^{1/3}`$ | Joshi & Sharma 1979 | empirical |
-| Axial dispersion $`D_L = 0.678\,D^{1.4}U_G^{0.3}`$ (cgs) | Deckwer et al. 1974 | empirical |
-| Axial dispersion $`D_L = 0.35\,D^{4/3}(gU_G)^{1/3}`$ (SI) | Baird & Rice 1975 | control; differs 4.15× from Deckwer |
-| Superficial gas velocity $`U_G = Q/(\pi D^2/4) = 9.6\times10^{-4}`$ m/s | jar CAD, pump setting | measured input |
+| Circulation velocity $`V_c = 1.31(gDU_G)^{1/3}`$ | Joshi & Sharma 1979 | simplified form; not checked against the paper (full text not obtained) |
+| Axial dispersion $`D_L = 2.7\,d^{1.4}u_G^{0.3}`$ (cgs: cm, cm/s, cm²/s; = $`0.678`$ in SI) | Deckwer et al. 1974, Eq. 1 | fit to their 15 and 20 cm columns plus other authors' data; mean error 30% |
+| Axial dispersion $`D_L = 0.35\,d^{4/3}(gu_G)^{1/3}`$ ($`K = 0.35`$ dimensionless) | Baird & Rice 1975, Eq. 11 | control; agrees with Deckwer within 4% for the jar |
+| Superficial gas velocity $`U_G = Q/(\pi D^2/4) = 9.6\times10^{-4}`$ m/s | jar CAD, pump setting | design value (not yet measured) |
+
+**The jar is outside the correlations' data range on three counts.** Baird & Rice correlate
+bubble-column data spanning $`d = 8.2`$–$`107`$ cm and $`u_G = 0.3`$–$`45`$ cm/s (their Table 1,
+which includes Deckwer's 20 cm column at 1.5–13 cm/s). They call their equation suitable only for
+"order-of-magnitude" estimates, urge caution for small-diameter columns and for short columns
+($`L/d < 5`$), and note that at very low gas rates, where bubbles rise individually, the turbulence
+model does not apply. The jar has $`d = 7.4`$ cm (slightly below), $`u_G = 0.096`$ cm/s (3× below
+the lowest data) and $`L/d \approx 1`$. So the correlation mixing times (0.8–2.4 s) are
+order-of-magnitude only. The 2-D solver range and the V1 dye measurement carry the argument.
 
 All three correlations were fitted on columns wider than the 74.4 mm jar.
 
