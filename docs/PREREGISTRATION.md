@@ -34,4 +34,21 @@ values should come out **at or below** the solver's cell-wise values.
 
 ## Addenda
 
-*(dated, after the fact only)*
+### Addendum 1 — 2026-11-23 (before any dye run)
+
+Written after correcting a units error in the Deckwer correlation (`p2/timescales.py`: the
+coefficient 2.7 is cgs; 0.678 had been applied to cgs inputs). No dye data existed when this
+was written. The original predictions above are unchanged.
+
+1. **Correlation estimate.** With the corrected coefficient, the two bubble-column correlations
+   (Deckwer 1974; Baird & Rice 1975) give $`D_L \approx 2\times10^{-3}`$ m²/s and
+   $`t_{\text{mix}} \approx 0.8`$–$`2.4`$ s. That is an order-of-magnitude estimate only: the jar
+   is below both correlations' data range in diameter, gas rate and $`L/d`$.
+2. **A reading below 6.7 s is not a failure of the Damköhler argument.** The solver's $`D_t`$
+   sweep stops at $`10^{-4}`$ m²/s, about 20× below the corrected $`D_L`$, so it never covered
+   the correlation's regime. A measured $`t_{\text{uniform}}`$ below 6.7 s would miss Prediction 1
+   as written, but would show *stronger* mixing than the sweep covered, which makes
+   $`\mathrm{Da}`$ smaller and the claim stronger. It will be reported as a miss of Prediction 1
+   with this explanation, not reinterpreted as a hit.
+3. **The falsifier stands.** A measured $`t_{\text{uniform}}`$ above 600 s for either design
+   still counts against the time-scale argument.
